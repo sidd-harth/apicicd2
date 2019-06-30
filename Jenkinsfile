@@ -15,7 +15,7 @@ stage ('pwd2') {
             steps {
               bat "cd hr-api/test-dir && npm install"
       
-               bat "cd hr-api/test-dir/test/features && cucumber-js --format json:reports.json features/prod_tests.feature"
+               bat "cd hr-api/test-dir/test/features && cucumber-js --format json:reports.json prod_tests.feature"
             }
         }
        
