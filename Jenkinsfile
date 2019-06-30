@@ -39,7 +39,7 @@ stage ('pwd2') {
     always {
       echo "I will always execute this!"
       // Cucumber report plugin
-       cucumber fileIncludePattern: '$WORKSPACE/reports.json'
+       cucumber fileIncludePattern: 'reports.json'
     }
   }
 }
