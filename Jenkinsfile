@@ -26,7 +26,7 @@ stage ('pwd2') {
   } finally {
    // generate cucumber reports in both Test Pass/Fail scenario
    // to generate reports, cucumber plugin searches for an *.json file in Workspace by default
-   bat "cd hr-api/test-dir/test/features && cp reports.json $WORKSPACE/hr-api"
+   bat "cd hr-api/test-dir/test/features && cp reports.json $WORKSPACE"
 
   }
               }
@@ -39,7 +39,7 @@ stage ('pwd2') {
     always {
       echo "I will always execute this!"
       // Cucumber report plugin
-       cucumber fileIncludePattern: 'Z:/Jenkins3/workspace/cc2/hr-api/reports.json'
+       cucumber fileIncludePattern: '$WORKSPACE/reports.json'
     }
   }
 }
