@@ -15,7 +15,7 @@ stage ('pwd2') {
             steps {
               bat "cd hr-api/test-dir && npm install"
       
-               bat "cd hr-api/test-dir && gulp test"
+               bat "cd hr-api/test-dir/test/features && cucumber-js -v"
             }
         }
        
